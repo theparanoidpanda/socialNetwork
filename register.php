@@ -38,7 +38,7 @@ if(isset($_POST['register_button'])){
 
     $date = Date("D.m.y,"); //Gets current date
 
-    //Check if email-1 matches email-2
+    //Check if both emails match
     if($em = $em2){
 
     }
@@ -46,7 +46,6 @@ if(isset($_POST['register_button'])){
         echo "Emails do not match!";
     }
 
-}
 ?>
 
 <!DOCTYPE hmtl>
@@ -72,6 +71,8 @@ if(isset($_POST['register_button'])){
             <br />
             <input type="submit" name="register_button" value="Register">
         </form>
+
+
     
     </body>
 
