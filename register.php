@@ -13,7 +13,7 @@ $em2 = ""; //Email2
 $password = ""; //Password
 $password2 = ""; //Password 2
 $date = ""; //Sign Up Date
-$error_array = ""; //Holds Error Messages
+$error_array = array(); //Holds Error Messages
 
 //If Register Button is pressed, Start handling the Form
 if(isset($_POST['register_button'])){
@@ -58,7 +58,7 @@ if(isset($_POST['register_button'])){
             $num_rows = mysqli_num_rows($e_check);
 
             if($num_rows > 0) {
-                echo "Email already in use";
+                array_push($error_array, "Email already in use <br />");
             }
         }
         else{
