@@ -1,4 +1,9 @@
 <?php
+ob_start(); //Turns on output buffering
+session_start(); //Start a session to allow variable to save
+
+$timezone = date_default_timezone_set("Europe/London");
+
 $servername = "localhost";
 $username = "root";
 $password = "";
