@@ -94,6 +94,33 @@ if(isset($_POST['register_button'])){
     if(strlen($password > 30 || strlen($password) < 5 )) {
         array_push($error_array, "Your password must be between 5 and 30 characters! <br />");
     }
+
+    if(empty($error_array)){
+        $password = md5($password); //Encrypt Password before sending to daabase
+
+        //Generate username by concatenating first name and last name
+        $username = strtolower($fname . "_" . $lname);
+        $check_username_query = mysqli_query($conn, "SELECT username FROM users WHERE username='$username'");
+
+        $i = 0;
+        //if username exsists add number to username
+        while(mysqli_num_rows($check_username_query) != 0) {
+            $i++; //Add 1 to 1
+            $username = $username . "_" . $i;
+            $check_username_query = mysqli_query($conn, "SELECT username FROM users WHERE username='$username'");
+        }
+
+        //Assign a profile pic
+        $rand = rand(1,2); // Random number bewteen 1 and 2
+
+        if($rand = 1)
+            $profile_pic = "assets/images/profile_pics/defaults/head_red";
+        else if($rand = 2)
+        $profile_pic = "assets/images/profile_pics/defaults/head_deep_blue";
+
+        $query = mysqli_query($conn, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
+        
+    }
 }
 
 ?>
