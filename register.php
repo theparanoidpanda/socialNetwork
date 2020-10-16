@@ -118,8 +118,18 @@ if(isset($_POST['register_button'])){
         else if($rand = 2)
         $profile_pic = "assets/images/profile_pics/defaults/head_deep_blue";
 
+        //Send information to database
         $query = mysqli_query($conn, "INSERT INTO users VALUES ('', '$fname', '$lname', '$username', '$em', '$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
         
+        //Confirmation message, using error array as already configured. 
+        array_push($error_array, "<span style='color: #ff0000;'>Registration Completed!</span><br />");
+
+        //Clear session variables if registration is complete
+        $_SESSION['reg_fname'] = "";
+        $_SESSION['reg_lname'] = "";
+        $_SESSION['reg_email'] = "";
+        $_SESSION['reg_email2'] = "";
+
     }
 }
 
@@ -128,7 +138,7 @@ if(isset($_POST['register_button'])){
 <!DOCTYPE hmtl>
 <html>
     <head>
-        <title>ParanoidPanda - Register</title>
+        <title>ParanoidPanda - Registration</title>
     </head>
 
     <body>
@@ -177,6 +187,9 @@ if(isset($_POST['register_button'])){
             else if(in_array("Your password must be between 5 and 30 characters! <br />", $error_array)) echo "Your password must be between 5 and 30 characters! <br />"; ?>
 
             <input type="submit" name="register_button" value="Register">
+            <br />
+
+            <?php if(in_array("<span style='color: #ff0000;'>Registration Completed!</span><br />", $error_array)) echo "<span style='color: #ff0000;'>Registration Completed!</span><br />";?>
         </form>
 
     </body>
