@@ -3,6 +3,7 @@
 // Asking to require the file to connect the database 
 require 'connections/connect.php';
 require 'includes/form_handlers/register_handler.php';
+require 'includes/form_handlers/login_handler.php';
 
 ?>
 
@@ -15,8 +16,8 @@ require 'includes/form_handlers/register_handler.php';
     <body>
 
     <form action="register.php" method="_POST">
-        <input type="email" name="log_email" placeholder="Email Address"><br />
-        <input type="password" name="log_password" placeholder="Password"><br />
+        <input type="email" name="log_email" placeholder="Email Address" required><br />
+        <input type="password" name="log_password" placeholder="Password" required><br />
         <input type="submit" name="login_button" value="Login">
     </form>
 
