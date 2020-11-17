@@ -11,16 +11,13 @@ require 'includes/form_handlers/login_handler.php';
 <html>
     <head>
         <title>ParanoidPanda - Registration</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
     </head>
 
     <body>
 
     <form action="register.php" method="POST">
-        <input type="email" name="log_email" placeholder="Email Address" value="<?php 
-            if(isset($_SESSION['log_email'])) { 
-                echo $_SESSION['log_email']; 
-                } 
-                ?>" required><br />
+        <input type="email" name="log_email" placeholder="Email Address" value="<?php if(isset($_SESSION['log_email'])) { echo $_SESSION['log_email']; } ?>" required><br />
         <input type="password" name="log_password" placeholder="Password" required><br />
         <input type="submit" name="login_button" value="Login">
 
