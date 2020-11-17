@@ -7,7 +7,7 @@ require 'includes/form_handlers/login_handler.php';
 
 ?>
 
-<!DOCTYPE hmtl>
+<!DOCTYPE html>
 <html>
     <head>
         <title>ParanoidPanda - Registration</title>
@@ -15,6 +15,8 @@ require 'includes/form_handlers/login_handler.php';
     </head>
 
     <body>
+
+    <div class="wrapper">   
 
     <form action="register.php" method="POST">
         <input type="email" name="log_email" placeholder="Email Address" value="<?php if(isset($_SESSION['log_email'])) { echo $_SESSION['log_email']; } ?>" required><br />
@@ -72,6 +74,8 @@ require 'includes/form_handlers/login_handler.php';
 
             <?php if(in_array("<span style='color: #ff0000;'>Registration Completed!</span><br />", $error_array)) echo "<span style='color: #ff0000;'>Registration Completed!</span><br />";?>
         </form>
+
+        </div>
 
     </body>
 </html>
