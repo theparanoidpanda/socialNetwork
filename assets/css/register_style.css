@@ -28,6 +28,11 @@ body {
     background-color: #e3e8ea;
 }
 
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
 .login_box {
     font-family: 'Comfortaa-Regular', sans-serif;
     position: relative;
@@ -84,4 +89,8 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
     border-color: #495054;
+}
+
+.second {
+    display: none;
 }
