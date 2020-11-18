@@ -17,7 +17,7 @@ require 'includes/form_handlers/login_handler.php';
     <body>
         <div class="login_box">
             <div class="login_header">
-                <h1>Panda Lab</h1>
+                <h1>The Panda Lab</h1>
                 Login or sign Up below!
             </div>   
 

@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Comfortaa-Bold';
+    src: url(../fonts/Comfortaa-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Comfortaa-Light';
+    src: url(../fonts/Comfortaa-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Comfortaa-Regular';
+    src: url(../fonts/Comfortaa-Regular.ttf);
+}
+
 form {
     text-align : center;
 }
@@ -5,7 +20,7 @@ form {
 body {
     margin: 0;
     padding: 0;
-    background-color: lightgray;
+    background-color: #e3e8ea;
 }
 
 .login_box {
@@ -14,7 +29,7 @@ body {
     margin-left: auto;
     top: 25px;
     width: 35%;
-    background-color: whitesmoke;
+    background-color: #bccad0;
     border: 2px solid #000000;
     border-radius: 7px;
     padding: 15px;
@@ -24,7 +39,7 @@ body {
 .login_header {
     width: 100%;
     height: 90px;
-    background-color: #3498db;
+    background-color: #9ba8ae;
     color: #fff;
     text-align: center;
 }
