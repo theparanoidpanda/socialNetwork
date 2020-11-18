@@ -17,14 +17,15 @@ require 'includes/form_handlers/login_handler.php';
     <body>
         <div class="login_box">
             <div class="login_header">
-                <h1>The Panda Lab</h1>
-                Login or sign Up below!
+                <h1>THE PARANOID LABRATORY</h1>
+                LOGIN OR SIGN UP BELOW
             </div>   
 
             <form action="register.php" method="POST">
+                <br />
                 <input type="email" name="log_email" placeholder="Email Address" value="<?php if(isset($_SESSION['log_email'])) { echo $_SESSION['log_email']; } ?>" required><br />
                 <input type="password" name="log_password" placeholder="Password" required><br />
-                <input type="submit" name="login_button" value="Login">
+                <input type="submit" name="login_button" value="LOGIN">
 
                 <?php if(in_array("Email or password was incorrect! <br />", $error_array)) echo "Email or password was incorrect! <br />" ?>
             </form>
@@ -72,7 +73,7 @@ require 'includes/form_handlers/login_handler.php';
                 else if(in_array("Your password can only contain english Characters or numbers! <br />", $error_array)) echo "Your password can only contain english Characters or numbers! <br />";  
                 else if(in_array("Your password must be between 5 and 30 characters! <br />", $error_array)) echo "Your password must be between 5 and 30 characters! <br />"; ?>
 
-                <input type="submit" name="register_button" value="Register">
+                <input type="submit" name="register_button" value="REGISTER">
                 <br />
 
                 <?php if(in_array("<span style='color: #ff0000;'>Registration Completed!</span><br />", $error_array)) echo "<span style='color: #ff0000;'>Registration Completed!</span><br />";?>
