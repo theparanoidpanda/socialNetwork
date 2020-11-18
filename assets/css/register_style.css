@@ -91,6 +91,6 @@ input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hove
     border-color: #495054;
 }
 
-.second {
+#second {
     display: none;
 }

@@ -13,16 +13,33 @@ require 'includes/form_handlers/login_handler.php';
         <title>ParanoidPanda - Registration</title>
         <link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/js/register.js"></script>
     </head>
     
     <body>
+
+    <?php
+        if(isset($_POST['register_button'])) {
+            echo '
+            <script>
+
+            $(document).ready(function() {
+                $("#first").hide();
+                $("#second").show();      
+            });    
+
+            </script>
+
+            ';
+        }
+    ?>
         <div class="login_box">
             <div class="login_header">
-                <h1>THE PARANOID LABRATORY</h1>
+                <h1>THE PARANOID LABORATORY</h1>
                 LOGIN OR SIGN UP BELOW
             </div>   
 
-            <div class="first">
+            <div id="first">
                 <form action="register.php" method="POST">
                     <br />
                     <input type="email" name="log_email" placeholder="Email Address" value="<?php if(isset($_SESSION['log_email'])) { echo $_SESSION['log_email']; } ?>" required><br />
@@ -36,7 +53,7 @@ require 'includes/form_handlers/login_handler.php';
                 </form>
             </div>
             
-            <div class="second">
+            <div id="second">
                 <form action="register.php" method="POST">
                     <input type="text" name="reg_fname" placeholder="First Name" value="<?php 
                     if(isset($_SESSION['reg_fname'])) { 
