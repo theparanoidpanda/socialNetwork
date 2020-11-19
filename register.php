@@ -1,6 +1,6 @@
 <?php 
 
-// Asking to require the file to connect the database 
+// Required Files, DB Connect & Form Handlers
 require 'connections/connect.php';
 require 'includes/form_handlers/register_handler.php';
 require 'includes/form_handlers/login_handler.php';
@@ -11,7 +11,10 @@ require 'includes/form_handlers/login_handler.php';
 <html>
     <head>
         <title>ParanoidPanda - Registration</title>
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
+
+        <!-- Javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="assets/js/register.js"></script>
     </head>
@@ -19,6 +22,7 @@ require 'includes/form_handlers/login_handler.php';
     <body>
 
     <?php
+        // jQuery function to swop Login and Register Forms.
         if(isset($_POST['register_button'])) {
             echo '
             <script>
@@ -33,6 +37,7 @@ require 'includes/form_handlers/login_handler.php';
             ';
         }
     ?>
+        <!-- Login Form -->
         <div class="login_box">
             <div class="login_header">
                 <h1>THE PARANOID LABORATORY</h1>
@@ -53,6 +58,7 @@ require 'includes/form_handlers/login_handler.php';
                 </form>
             </div>
             
+            <!-- Register Form -->
             <div id="second">
                 <form action="register.php" method="POST">
                     <input type="text" name="reg_fname" placeholder="First Name" value="<?php 
@@ -61,6 +67,8 @@ require 'includes/form_handlers/login_handler.php';
                         } 
                         ?>" required>
                     <br />
+
+                    <!-- First Name Error Messages -->
                     <?php if(in_array("Your first name must be between 2 and 30 characters! <br />", $error_array)) echo "Your first name must be between 2 and 30 characters! <br />"; ?>  
 
                     <input type="text" name="reg_lname" placeholder="Last Name" value="<?php 
@@ -69,6 +77,8 @@ require 'includes/form_handlers/login_handler.php';
                         } 
                         ?>"required>
                     <br />
+
+                    <!-- Last Name Error Messages -->
                     <?php if(in_array("Your last name must be between 2 and 30 characters! <br />", $error_array)) echo "Your last name must be between 2 and 30 characters! <br />"; ?>  
 
                     <input type="email" name="reg_email" placeholder="Email" value="<?php 
@@ -84,6 +94,8 @@ require 'includes/form_handlers/login_handler.php';
                         } 
                         ?>"required>
                     <br />
+
+                    <!-- Email Error Messages -->
                     <?php if(in_array("Email already in use! <br />", $error_array)) echo "Email already in use! <br />";
                     else if(in_array("Invalid Email Format! <br />", $error_array)) echo "Invalid Email Format! <br />";  
                     else if(in_array("Emails do not match! <br />", $error_array)) echo "Emails do not match! <br />"; ?>
@@ -93,6 +105,7 @@ require 'includes/form_handlers/login_handler.php';
                     <input type="password" name="reg_password2" placeholder="Confirm Password" required>
                     <br />
 
+                    <!-- Password Error Message -->
                     <?php if(in_array("Your passwords do not match! <br />", $error_array)) echo "Your passwords do not match! <br />";
                     else if(in_array("Your password can only contain english Characters or numbers! <br />", $error_array)) echo "Your password can only contain english Characters or numbers! <br />";  
                     else if(in_array("Your password must be between 5 and 30 characters! <br />", $error_array)) echo "Your password must be between 5 and 30 characters! <br />"; ?>
