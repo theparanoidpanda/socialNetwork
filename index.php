@@ -1,5 +1,9 @@
-<!DOCTYPE html>
+<?php
+include("includes/header.php");
 
+?>
+
+<!DOCTYPE html>
 <html>
     <head>
         <title>Paranoid Panda</title>
