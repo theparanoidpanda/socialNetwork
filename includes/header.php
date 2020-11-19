@@ -22,9 +22,16 @@ else {
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     </head>
 
     <body>
-        <p>Hi  All</p>
+        <div class="top_bar">
+            <div class="logo">
+                <a href="index.php">THE PANDA LAB</a>
+            </div>
+        </div>
+        <p>This is some text</p>
+    </body>
 </html>

@@ -40,7 +40,7 @@ require 'includes/form_handlers/login_handler.php';
         <!-- Login Form -->
         <div class="login_box">
             <div class="login_header">
-                <h1>THE PARANOID LABORATORY</h1>
+                <h1>THE PANDA LAB</h1>
                 LOGIN OR SIGN UP BELOW
             </div>   
 
