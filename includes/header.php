@@ -22,6 +22,7 @@ else {
 
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     </head>
@@ -31,6 +32,12 @@ else {
             <div class="logo">
                 <a href="index.php">THE PANDA LAB</a>
             </div>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
         </div>
         <p>This is some text</p>
     </body>

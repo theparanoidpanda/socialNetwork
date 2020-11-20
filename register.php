@@ -12,6 +12,7 @@ require 'includes/form_handlers/login_handler.php';
     <head>
         <title>ParanoidPanda - Registration</title>
         <!-- CSS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 
         <!-- Javascript -->

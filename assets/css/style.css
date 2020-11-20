@@ -41,3 +41,21 @@ body {
     text-decoration: none;
     color: #ffffff;
 }
+
+nav {
+    float: right;
+    right: 1px;
+    position: absolute;
+    margin: 10px;
+}
+nav a {
+    position: relative;
+    color: #000000;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
