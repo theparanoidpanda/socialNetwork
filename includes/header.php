@@ -34,11 +34,24 @@ else {
             </div>
 
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
+                <a href="#">
+                    <span class="material-icons">message</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons">home</span>
+                </a>
+                <a href="#">
+                <span class="material-icons">group</span>
+                </a>
+                <a href="#">
+                <span class="material-icons">settings</span>
+                </a>
+                <a href="#">
+                <span class="material-icons">exit_to_app</span>
+                </a>
             </nav>
         </div>
-        <p>This is some text</p>
+
+            <p>This is some text</p>
     </body>
 </html>

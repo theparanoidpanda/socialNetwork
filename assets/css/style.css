@@ -1,20 +1,31 @@
 @font-face {
-    font-family: 'Comfortaa-Bold';
-    src: url(../fonts/Comfortaa-Bold.ttf);
+    font-family: 'Roboto-Thin';
+    src: url(../fonts/Roboto-Thin.ttf);
 }
 
 @font-face {
-    font-family: 'Comfortaa-Light';
-    src: url(../fonts/Comfortaa-Light.ttf);
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto-Light.ttf);
 }
 
 @font-face {
-    font-family: 'Comfortaa-Regular';
-    src: url(../fonts/Comfortaa-Regular.ttf);
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
 }
 
-body {
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
 
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url(../fonts/Roboto-Black.ttf);
 }
 
 .top_bar {
@@ -29,7 +40,7 @@ body {
 }
 
 .logo a {
-    font-family: 'Comtortaa-Bold, sans-serif';
+    font-family: 'Roboto-Black, sans-serif';
     margin-left: 10px;
     font-size: 200%;
     position: relative;
@@ -38,6 +49,7 @@ body {
 }
 
 .logo a:hover {
+    font-family: 'Roboto-Black, sans-serif';
     text-decoration: none;
     color: #ffffff;
 }
