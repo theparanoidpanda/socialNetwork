@@ -28,19 +28,21 @@
     src: url(../fonts/Roboto-Black.ttf);
 }
 
+
 .top_bar {
     width: 100%;
     min-width: 1050px;
     height: 100%;
-    background-color: #9ba8ae;
+    background-color: #bccad0;
     border-bottom: 2px solid #000000;
     color: #000000;
     margin: 0 0 10px 0;
     display: inline-flex;
+    position: fixed;
 }
 
 .logo a {
-    font-family: 'Roboto-Black, sans-serif';
+    font-family: 'Roboto-Bold, sans-serif';
     margin-left: 10px;
     font-size: 200%;
     position: relative;
@@ -55,19 +57,46 @@
 }
 
 nav {
+    font-family: 'Roboto-Black, sans-serif';
+    font-size: 100%;
     float: right;
     right: 1px;
     position: absolute;
     margin: 10px;
 }
 nav a {
+    font-family: 'Roboto-Black, sans-serif';
     position: relative;
     color: #000000;
     text-decoration: none;
-    font-size: 100%;
+    font-size: 150%;
 }
 
 nav a:hover {
     text-decoration: none;
     color: #ffffff;
+}
+
+.wrapper {
+    margin: 0 auto;
+    top: 50px;
+    position: relative;
+    padding: 0 10px;
+    width: 75%;
+    min-width: 950px;
+    background-color: #707a7e;
+}
+
+.column {
+    background-color: #495054;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.user_details {
+    width: 250px;
+    float: left;
+    margin-bottom: 20px;
 }

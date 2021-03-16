@@ -5,6 +5,8 @@ require 'connections/connect.php';
 //Session Check using variables from Login Handler. If unnsuccessful redirect.
 if(isset($_SESSION['username'])) {
     $userLoggedIn = $_SESSION['username'];
+    $user_details_query = mysqli_query($conn, "SELECT * FROM users WHERE username='$userLoggedIn'");
+    $user = mysqli_fetch_array($user_details_query);
 }
 else {
     header("Location: register.php");
@@ -30,28 +32,31 @@ else {
     <body>
         <div class="top_bar">
             <div class="logo">
-                <a href="index.php">THE PANDA LAB</a>
+                <a href="index.php">PARANOID PANDA</a>
             </div>
 
             <nav>
                 <a href="#">
-                    <span class="material-icons">message</span>
+                    <?php echo $user['first_name'] ?>
                 </a>
-                <a href="#">
+                <a href="index.php">
                     <span class="material-icons">home</span>
                 </a>
                 <a href="#">
-                <span class="material-icons">group</span>
+                    <span class="material-icons">message</span>
                 </a>
                 <a href="#">
-                <span class="material-icons">settings</span>
+                    <span class="material-icons">group</span>
                 </a>
                 <a href="#">
-                <span class="material-icons">exit_to_app</span>
+                    <span class="material-icons">settings</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons">exit_to_app</span>
                 </a>
             </nav>
         </div>
+        <br />
 
-            <p>This is some text</p>
-    </body>
-</html>
+           
+        <div class="wrapper">
